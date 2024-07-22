@@ -11,12 +11,12 @@ const LinkSubmitter = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         
-        fetch('http//localhost:8000/api/web_scraper/submit-link/', {
+        fetch('http://127.0.0.1:8000/api/scraper/submit/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ link: link })
+            body: JSON.stringify({ 'link': link })
         })
         .then(response => response.json())
         .then(data => {
